@@ -1,0 +1,74 @@
+ <h2>Celebrities list</h2>
+<div>
+  {{#each celebrities as |celebrity|}}
+    <div style="border: black solid 2px; padding: 10px; width: 25%; margin: 5px 0;">
+      <a href="/celebrities/{{celebrity._id}}">{{celebrity.name}}</a>
+        <form action="/celebrities/delete/{{celebrity._id}}" method="POST">
+        <button class="btn btn-danger" style="margin: 5px">Delete!</button>
+      </form>
+      <div>
+        <a class="btn btn-success" style="margin: 5px" href="/celebrities/{{celebrity._id}}/edit">Edit!</a>
+      </div>
+</div>
+  {{/each}}
+</div>
+<a class="btn btn-secondary" href="/celebrities/new">Add new celebrity</a>
+ 
+ 
+ 
+ 
+ 
+ {{!-- <h2>Celebrities</h2>
+  <ul>
+ {{celebrities.forEach((celebrity) => { }}   
+    <p>{{celebrity.name}}</p>
+    <li>
+        <a href="/celebrities/{{Celebrity.name}}"> {{Celebrity.name}}</a>
+        <form action="/celebrities/{{ Celebrity.name }}/delete" method="POST">
+            <input type="submit" value="Delete">
+            <input type="submit" value="Delete"
+                onclick="return confirm('Are you sure you want to delete {{ celebrity.name }}?')">
+        </form>
+    </li>
+  </ul>
+
+<a href="/celebrities/new">Create a new celebrity</a> --}} 
+{{!-- -----------------------------------------aqui el 2 --}}
+{{!-- <div class="container">
+  <h2>Celebrities</h2>
+  <a href="/celebrities/new" class="newCelebrity">New Celebrity</a>
+  <p>Celebrities saved: </p>
+  <div class="list">
+    {{#each celebrities}}
+    <div class="element">
+      <a href="/celebrities/{{this._id}}" >{{this.name}}</a>
+      <form action="/celebrities/{{this._id}}/delete" method="post">
+        <div class="form-group">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </div>
+      </form>
+
+      <form action="/celebrities/{{this._id}}/edit" method="post">
+        <div class="form-group">
+          <button type="submit" class="btn btn-info">Edit</button>
+        </div>
+      </form>
+    </div>
+    {{/each}}
+  </div>
+</div> --}}
+
+     
+
+{{!-- <div class="celebrities">
+  {{#each celebrities as |celebrity|}}   
+    <div class="beer-item"> 
+      <img class="beer-item-image" src="{{beer.image_url}}" alt="beer image">
+      <h1>{{celebrity.name}}</h1>
+      <h3 class="light">{{beer.tagline}}</h3>
+      <p>{{beer.description}}</p>
+      <p>{{beer.first_brewed}}</p>
+     <h1>hola</h1>
+    </div>
+  {{/each}}
+</div> --}}
