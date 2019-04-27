@@ -52,10 +52,10 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 const index = require('./routes/index');
-const celebrities = require('./routes/celebrities');//mia
+const players = require('./routes/players');//mia
 
 app.use('/', index);
-app.use('/celebrities', celebrities);//mia
+app.use('/players', players);//mia
 
 
 

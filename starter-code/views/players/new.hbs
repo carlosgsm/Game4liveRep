@@ -1,15 +1,27 @@
-<h2>Add a new celebrity</h2>
+<h2>Add a new player</h2>
 
-<form action="/celebrities" method="POST">
-  <div>
-    <input type="text" name="name" value="Enter celebrity name...">
-  </div>
-  <div>
-    <input type="text" name="occupation" value="Enter celebrity's occupation">
-  </div>
-  <div>
-    <input type="text" name="catchPhrase" value="Enter Celebrity's catch phrase">
-  </div>
+<form action="/players" method="POST">
+ </div>
+    <div class="form-group">
+    <label for="inputname">Name</label>
+    <input type="text" class="form-control" name="name" placeholder="Be original">
+ </div>
+ </div>
+    <div class="form-group">
+    <label for="inputnickInGame">Nick In Game</label>
+    <input type="text" class="form-control" name="nickInGame" placeholder="Enter your nick in the game">
+ </div>
+
+ <div class="form-group col-md-4">
+    <label for="inputkindOfPlayer"> Kind of player</label>
+      <select type="text" name="kindOfPlayer" class="form-control">
+        <option selected>Choose Worm!</option>
+        <option>Hardcore</option>
+        <option>Profesional</option>
+        <option>Casual</option>
+      </select>
+    </div>
+
   <div>
     <button class="btn btn-primary" type="submit">Submit</button>
   </div>
@@ -21,7 +33,7 @@
 
 {{!-- players --}}
 
-<form>
+{{!-- <form>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
@@ -86,5 +98,5 @@
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
+</form> --}}
 

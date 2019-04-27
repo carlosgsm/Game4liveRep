@@ -1,0 +1,30 @@
+<h2>Edit a player profile</h2>
+
+<form action="/players/{{player._id}}" method="POST">
+  <div>
+    <input type="text" name="name" value="{{player.name}}">
+  </div>
+  <div>
+    <input type="text" name="nickInGame" value="{{player.nickInGame}}">
+  </div>
+  <div>
+    <input type="text" name="kindOfPlayer" value="{{player.kindOfPlayer}}">
+  </div>
+   <div>
+    <input type="text" name="language" value="{{player.language}}">
+  </div>
+   <div>
+    <input type="text" name="schedule" value="{{player.schedule}}">
+  </div>
+   <div>
+    <input type="text" name="levelInGame" value="{{player.levelInGame}}">
+  </div>
+  <div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+  
+</form>
+
+{{#if error}}
+  <div style="border:red solid 2px">{{error.message}}</div>
+{{/if}}
